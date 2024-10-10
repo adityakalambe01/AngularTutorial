@@ -1,0 +1,36 @@
+<div class="main-ct">
+  <div class="containerct">
+    <i style="--clr: #ce4b0e"></i>
+    <i style="--clr: #ffffff"></i>
+    <i style="--clr: #056e13"></i>
+
+    <div class="login">
+      <h2>Login Form</h2>
+      <div class="input-box">
+        <input
+          type="text"
+          placeholder="Username"
+          #username="ngModel"
+          [(ngModel)]="userObject.username"
+          name="username"
+        />
+      </div>
+      <div class="input-box">
+        <input
+          type="password"
+          placeholder="Enter Password"
+          [(ngModel)]="userObject.password"
+          name="password"
+          id="password"
+        />
+      </div>
+      <div class="input-box">
+        <input type="submit" value="Sign In" (click)="onLogin()" />
+      </div>
+      <div class="links">
+        <a href="#">Forgot Password?</a>
+        <a href="#">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>

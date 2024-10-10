@@ -1,0 +1,38 @@
+<div class="row pt-2 m-1">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header bg-secondary text-white">
+        <h1>Component Life Cycle Event</h1>
+        <p>Component Life Cycle Event</p>
+      </div>
+      <div class="card-body">
+        <div class="container table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Interface</th>
+                <th>Method</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for(lc of lifeCycle; track $index){
+              <tr>
+                <td>{{ lc.interface }}</td>
+                <td>ng{{ lc.interface }}()</td>
+                <td>
+                  <ul class="list-group">
+                    @for(desc of lc.description; track $index){
+                      <li class="list-group-item">{{desc}}</li>
+                    }
+                  </ul>
+                </td>
+              </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

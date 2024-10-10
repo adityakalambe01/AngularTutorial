@@ -1,0 +1,51 @@
+<div class="row pt-2 m-1">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header bg-secondary text-white">
+        <h1>ng-template</h1>
+      </div>
+      <div class="card-body">
+        <div class="row pt-3">
+          <div class="col-3" *ngIf="isUserLoggedIn; else notLogged">
+            <div class="bg-primary p-3 text-center">{{ loggedInUserName }}</div>
+          </div>
+          <ng-template #notLogged>
+            <div class="col-3">
+              <div class="bg-primary p-3 text-center">
+                <span>User not LoggedIn</span>
+              </div>
+            </div>
+          </ng-template>
+
+
+        <!-- second Div -->
+        <div class="col-4">
+          <div #dynamicContainer></div>
+        </div>
+        </div>
+        <!-- second Div -->
+        <div class="col-4">
+          <ng-template #dynamicTemplate>
+            <div class="col-3">
+              <p>Hi From Dynamic Template</p>
+            </div>
+          </ng-template>
+        </div>
+
+        <div class="row pt-3">
+          <div class="col-3 text-center">
+            <button class="btn btn-success mx-2">show</button>
+            <button class="btn btn-danger">Hide</button>
+          </div>
+
+          <!--  -->
+          <div class="col-4 text-center">
+            <button class="btn btn-danger mx-2" (click)="loadContent()">
+              Load Content
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
